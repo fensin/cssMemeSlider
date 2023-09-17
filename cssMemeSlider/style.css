@@ -13,7 +13,8 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  width: 50rem;
+  max-width: 60rem;
+  min-width: 35rem;
   height: 100vh;
 }
 
@@ -174,7 +175,7 @@ p {
   color: #444140;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .bottom {
     flex-direction: column-reverse;
   }
