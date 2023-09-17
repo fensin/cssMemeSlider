@@ -193,6 +193,6 @@ p {
   }
   
   #r4:checked ~ .slides__container .text {
-    margin-top: -15%;
+    margin-top: -16%;
   }
 }
