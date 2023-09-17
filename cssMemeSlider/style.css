@@ -10,7 +10,7 @@
 }
 
 input {
-  display: none;
+ display: none;
 }
 
 .slides__container {
@@ -28,6 +28,7 @@ input {
   display: flex;
   width: 400%;  
   height: 100%;
+  transition: all .3s;
 }
 
 .img__wrapper {
@@ -41,16 +42,30 @@ input {
   height: 100%;
 }
 
+[alt="wideMeme"] {
+  width: 100%;
+}
+
 .btns {
   display: flex;
+  gap: .5rem;
+  align-items: center;
 }
 
 label {
   background-color: blue;
   display: block;
-  width: 4rem;
-  height: 4rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
+}
+
+label:hover {
+  opacity: 0.6;
+}
+
+label:active {
+  opacity: .8;
 }
 
 .bottom {
@@ -58,10 +73,42 @@ label {
   justify-content: space-between;
 }
 
-#r1:checked ~ .img__wrapper {
-  margin-left: 0;
+.esss {
+  height: 2rem;
+  overflow: hidden;
 }
 
-#r2:checked ~ .slides__content {
-  margin-left: -750px;
+.text {
+  display: flex;
+  flex-direction: column;;
+  gap: 1rem;
+  transition: all .3s;
+}
+
+#r2:checked ~ .slides__container .slides__content {
+  margin-left: -100%;
+}
+
+#r3:checked ~ .slides__container .slides__content {
+  margin-left: -200%;
+}
+
+#r4:checked ~ .slides__container .slides__content {
+  margin-left: -300%;
+}
+
+#r1:checked ~ .slides__container .text {
+  margin-top: .1rem;
+}
+
+#r2:checked ~ .slides__container .text {
+  margin-top: -2rem;
+}
+
+#r3:checked ~ .slides__container .text {
+  margin-top: -4.1rem;
+}
+
+#r4:checked ~ .slides__container .text {
+  margin-top: -6.3rem;
 }
