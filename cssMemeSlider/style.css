@@ -1,52 +1,67 @@
-*, ::after, ::before {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.slider-window {
-  width: 100%;
-  height: 100vh;
-  background: black;
-  overflow: hidden;
-}
-
-.mem img {
-  width: 100%;
-  height: 100%;
-}
-
-.mem {
-  width: 25%;
-  height: 25%;
-}
-
-.memWrapper {
-  width: 60%;
-  height: 60%;
-  display: flex;
-}
-
-.carousel {
-  display: flex;
+.container {
+  margin: 0 auto;
+  width: 50rem;
 }
 
 input {
   display: none;
 }
 
-.controls {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  display: flex;
-  gap: 20px;
-  transform: translateX(-50%);
+.slides__container {
+  padding: 15px;
+  border: .2rem solid black;
 }
 
-.controls label {
-  width: 20px;
-  height: 20px;
-  background: white;
-  border-radius: 20px;
+.slides__wrapper {
+  width: 100%;
+  height: 35rem; 
+  overflow: hidden;
+}
+
+.slides__content {
+  display: flex;
+  width: 400%;  
+  height: 100%;
+}
+
+.img__wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  width: 25%;
+}
+
+.img__wrapper img {
+  height: 100%;
+}
+
+.btns {
+  display: flex;
+}
+
+label {
+  background-color: blue;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+#r1:checked ~ .img__wrapper {
+  margin-left: 0;
+}
+
+#r2:checked ~ .slides__content {
+  margin-left: -750px;
 }
